@@ -20,7 +20,7 @@ namespace Play.Catalog.Service.Repositories
     }
 
     // We use IReadOnlyCollection because the consumer should not need to modify anything
-    public async Task<IReadOnlyCollection<Item>> GetAllSync()
+    public async Task<IReadOnlyCollection<Item>> GetAllAsync()
     {
       return await dbCollection.Find(filterBuilder.Empty).ToListAsync();
     }
