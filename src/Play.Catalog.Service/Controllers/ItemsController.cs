@@ -14,9 +14,9 @@ namespace Play.Catalog.Service.Controllers
     public class ItemsController : ControllerBase
     {
         // Readonly because we do not want it to be modified after construction
-        private readonly IItemsRepository itemsRepository;
+        private readonly IRepository<Item> itemsRepository;
 
-        public ItemsController(IItemsRepository itemsRepository)
+        public ItemsController(IRepository<Item> itemsRepository)
         {
             this.itemsRepository = itemsRepository;
         }
